@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-    <title>TO DO LIST</title>
+    <link rel="icon" type="image/x-icon" href="./img/lista.svg">
+    <title>To Do List</title>
 </head>
 <body>
     <div class="container">
         <h1 class="title">Lista de Tarefas</h1>
         <hr>
         <div class="todobtn">
-            <button class="add">Add tarefa</button>
-            <select name="filter" class="filter">
-                <option value="Todos">Todos</option>
-                <option value="Completos">Completos</option>
-                <option value="A Completar">A Completar</option>
+            <select class="filter" id="filter" onchange="filterItems()">
+                <option value="all">Todos</option>
+                <option value="completed">Completos</option>
+                <option value="notcompleted">A Completar</option>
             </select>
         </div>
         <div id="list">
             
         </div>
         <hr>
+        <div class="addtodo" onsubmit="addItem()">
+            <input type="text" id="nametodo" class="nametodo" placeholder="Nome da tarefa" required>
+            <select id="todocat" class="todocat">
+                <option value="Estudos">Estudos</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Pessoal">Pessoal</option>
+            </select>
+            <button class="add" onclick="addItem()">Add tarefa</button>
+        </div>
     </div>
 </body>
-
 <script src="./index.js"></script>
 </html>
