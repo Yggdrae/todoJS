@@ -1,6 +1,7 @@
 body {
     background: url('./img/bg.jpg');
     background-size: cover;
+    font-family: sans-serif;
 }
 
 .container {
@@ -13,9 +14,10 @@ body {
 }
 
 .todobtn {
-    display: flex;
-    justify-content: right;
     margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .add {
@@ -36,6 +38,7 @@ body {
 .filter {
     border-radius: 5px;
     padding: 5px;
+    height: 30px;
 }
 
 .item {
@@ -88,10 +91,6 @@ body {
 
 .deletar:hover{
     opacity: 1;
-}
-
-.addtodo {
-    margin: 50px;
 }
 
 .todocat {
